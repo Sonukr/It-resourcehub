@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app id="load">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="/js/modernizer-latest.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="/Library/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style-ebook.css"  />
+    <title>IT-ebook's</title>
+       
+
+</head>
+
+<body>
+    <div ng-controller="Main" class="container" id="main">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header ">
+           <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button >
+            <a class="navbar-brand pull-right " href="/index.html">IT-Resourcehub</a>
+             
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+              <li class="active">
+              <a href="/partials/ebooks.html">E-book's</a>
+            </li>
+                <li>
+              <a href="/partials/videos.html">Video's</a>
+            </li>
+              <li>
+                  <div  class="input-box ">
+              <input type="search" placeholder="Search e-book here.." ng-model="query"  ng-init="query='css'" id="search"class="input-lg ">
+            <button id="click"class="btn btn-lg btn-warning" data-loading-text="Searching..."ng-click="search()">Search </button>
+           </div>
+            </li>
+           
+            </ul>
+          </div>
+      </div>
+   </nav>
+   
+     <div class="row">
+        <div class="book-list col-md-6" id="books">
+          <br><br><br><br>
+           <h2 ng-show="totalBook">There Are {{total}} Book's Result For {{query}} </h2>
+            <div class="book animated lightSpeedIn" ng-repeat="b in books " >
+                <div class="book-cover col-md-3">
+                    <img src="{{b.Image}}" alt="Alternate Text" class="img" />
+                </div>
+                <div class="book-info col-md-8 animated lightSpeedIn">
+<!--                    <h5>{{b.ID}}</h5>-->
+                    <h3>{{b.Title}}</h3>
+<!--                    <p>{{b.SubTitle}}</p>-->
+                    <p>{{b.Description}}</p>
+                    <p>ISBN : {{b.isbn}}</p>
+                    <button ng-click="download(b.ID)" class="btn btn-lg btn-success pull-right">Download&nbsp;<span class="glyphicon glyphicon-cloud-download"></span</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 footer ">
+            <div class="col-md-5"></div> 
+        <button class="btn btn-lg btn-warning pull-left prew"ng-show="pageNo >= 2" ng-click="prev()" title="Prew"><span class=" glyphicon glyphicon-step-backward"></span></button>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+         <button class="btn btn-lg btn-warning pull-left next" ng-show="Nextbtn" ng-click="next()"  title="Next"><span class="glyphicon glyphicon-step-forward"></span></button>
+        </div>
+    </div>  
+
+   <div class="row disqus">
+     <div class="col-md-1"></div>
+      <div class="col-md-10" ng-show="disqus" id="disqus">
+            <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'itresourcehub'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div class="col-md-1"></div>
+      </div>
+    </div>
+    <hr ng-show="hr">
+    <div class=" col-md-9" ng-show="facebook">
+    <div class="col-md-3"></div>
+ <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fitebooksbysonu&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=278414972344370" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
+ <div class="col-md-3"></div>
+ </div>
+<!--
+   <div class="facebook">
+       <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fitebooksbysonu&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=278414972344370" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+   </div>
+-->
+    <div class="intro">
+        <a href="https://www.facebook.com/sonu.kr.vtu" target="_blank" class="btn author" ng-show="Author">By Sonu</a>
+    </div>
+        <div class="top">
+            <a href="#main"  class="btn btn-default scrollup" title="Go To Top" ng-show="Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+</div>
+
+</body>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/Library/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/script-ebook.js"> </script>
+</html>
+
+
+
+
+
+
+
+
+
+

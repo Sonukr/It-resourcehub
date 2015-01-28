@@ -1,0 +1,428 @@
+//colors
+$color_gray_nurse_approx: #e7ecea;
+$color_jungle_green_approx: #2cc185;
+$color_boulder_approx: #74777b;
+$white: #fff;
+$black: black;
+$color_silver_approx: #bcbcbc;
+$color_stack_approx: #8b8a8a;
+$color_celeste_approx: #cccccc;
+$color_black_haze_approx: #f7f7f7;
+$wild_sand: #f4f4f4;
+$color_gallery_approx: #ededed;
+
+//fonts
+$font_0: sans-serif;
+$font_1: arial;
+$font_2: lobster;
+
+//
+$shadow_0:
+//@extend-elements
+//original selectors
+//.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:focus
+%extend_1 {
+	margin-left: 40px;
+	border: none;
+	color: $black;
+	background: #2CC185;
+}
+
+//original selectors
+//.navbar-inverse .navbar-toggle:hover, 
+%extend_2 {
+	background: transparent;
+	color: $black;
+	background: $color_boulder_approx;
+}
+
+//original selectors
+//.btn-success, .btn-success:active, .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active
+%extend_3 {
+	background: #2CC185;
+	color: $white;
+	border-color: #2CC185;
+	//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+	border-radius: 2px;
+}
+
+//original selectors
+//.sidr ul li a, .sidr ul li span, .sidr ul li ul li a, .sidr ul li ul li span
+%extend_4 {
+	color: #2CC185;
+	font: 13px $font_1;
+	text-transform: capitalize;
+	cursor: pointer;
+	//Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: .2s;
+	margin-left: -10px;
+}
+
+//original selectors
+//.iframe li, h3, h1
+%extend_5 {
+	font: 17px $font_1;
+	list-style: decimal-leading-zero;
+	color: #2CC185;
+	text-transform: capitalize;
+	cursor: pointer;
+	//Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: .5s;
+	padding: 10px;
+}
+
+
+body {
+	background: $color_gray_nurse_approx;
+	//Instead of the line below you could use @includebox-sizing($bs)
+	box-sizing: border-box;
+	font-family: $font_0;
+}
+a {
+	text-decoration: none;
+	color: #2CC185;
+	font: 19px $font_1;
+	&:hover {
+		text-decoration: none;
+		color: $color_boulder_approx;
+	}
+}
+.navbar-brand {
+	text-align: center;
+	font-size: 24px;
+	font-family: $font_2;
+}
+.navbar-inverse {
+	background: $white;
+	border: none;
+	color: $color_boulder_approx;
+	border-bottom: 4px solid #2CC185;
+	.navbar-brand {
+		font-weight: 400;
+		color: #2CC185;
+		//Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: background-color 0.2s, color 0.2s;
+		&:hover {
+			color: $color_boulder_approx;
+		}
+	}
+	.navbar-toggle {
+		@extend %extend_1;
+		&:focus {
+			@extend %extend_1;
+		}
+		&:hover {
+			@extend %extend_2;
+		}
+	}
+}
+.navbar> {
+	&.container .navbar-brand {
+		margin-left: -50px;
+	}
+	&.container-fluid .navbar-brand {
+		margin-left: -50px;
+	}
+}
+ {
+	@extend %extend_2;
+}
+.input-group-addon {
+	cursor: pointer;
+	height: 40px;
+}
+.input-box {
+	margin-top: 10%;
+	width: 105%;
+	margin-bottom: 10px;
+	border-bottom: 1px solid $color_gray_nurse_approx;
+}
+.btn-success {
+	@extend %extend_3;
+	&:active {
+		@extend %extend_3;
+		@extend %extend_3;
+	}
+	&:hover {
+		@extend %extend_3;
+		background: $color_jungle_green_approx;
+		color: $white;
+	}
+	&:focus {
+		@extend %extend_3;
+	}
+	&.active {
+		@extend %extend_3;
+	}
+	> a >span {
+		color: $white;
+	}
+}
+.tooltip {
+	&.bottom {
+		margin-top: 10px;
+	}
+	&.right {
+		margin-left: 15px;
+	}
+	&.left {
+		margin-left: -15px;
+	}
+}
+.breadcrumb {
+	margin-left: 3%;
+	width: 92%;
+	margin-top: 35px;
+	padding: 14px 7px;
+	color: #2CC185;
+	> li + li:before {
+		color: #CCCCCC;
+		content: "/ ";
+		padding: 0 5px;
+	}
+}
+.bradcrumb>li>a {
+	color: #2CC185;
+}
+#side-menu {
+	color: $color_boulder_approx;
+	&:hover {
+		color: #2CC185;
+	}
+}
+.sidr {
+	background: $white;
+	border: none;
+	//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	margin-top: 55px;
+	ul {
+		width: 107%;
+		border-bottom: none;
+		border-top: none;
+		li {
+			border-top: none;
+			border-bottom: 1px solid $color_gray_nurse_approx;
+			border-top: 1px solid $color_gray_nurse_approx;
+			border-right: 4px solid #2CC185;
+			a {
+				@extend %extend_4;
+			}
+			span {
+				@extend %extend_4;
+			}
+			&.sidr-class-active {
+				>a {
+					//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+				}
+				> span {
+					//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+				}
+			}
+			ul li {
+				a {
+					@extend %extend_4;s
+				}
+				span {
+					@extend %extend_4;
+					&:hover {
+						color: $color_boulder_approx;
+					}
+				}
+				&.sidr-class-active {
+					>a {
+						//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: none;
+					}
+					> span {
+						//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: none;
+					}
+				}
+				&:hover > {
+					a {
+						//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: none;
+					}
+					span {
+						//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: none;
+					}
+				}
+				&.active > {
+					a {
+						//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: none;
+					}
+					span {
+						//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: none;
+					}
+				}
+			}
+			&:hover > {
+				a {
+					//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+				}
+				span {
+					//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+				}
+			}
+			&.active > {
+				a {
+					//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+				}
+				span {
+					//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+#cssmenu {
+	margin-top: -5px;
+	> ul {
+		:hover {
+			border-right: 2px solid $color_boulder_approx;
+		}
+		> li > a {
+			:hover {
+				color: $color_boulder_approx;
+			}
+			> span {
+				margin-left: 0;
+				font-weight: bold;
+				font-size: 15px;
+				&:hover {
+					border-right: none;
+				}
+			}
+		}
+	}
+	ul ul {
+		&:hover {
+			border-right: none;
+		}
+		a {
+			font-size: 13px arial;
+			font-weight: bold;
+			border-left: 3px solid #2CC185;
+			&:hover {
+				border-left: 3px solid $color_boulder_approx;
+			}
+		}
+	}
+}
+.video {
+	margin-top: 25px;
+	position: relative;
+}
+iframe {
+	//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 2px 6px $black;
+}
+#iframe {
+	width: 90%;
+	display: block;
+	margin-left: 5%;
+	align-content: space-between;
+}
+h3 {
+	@extend %extend_5;
+}
+h1 {
+	@extend %extend_5;
+}
+footer {
+	margin-top: 100px;
+}
+#nprogress {
+	.bar {
+		background: #2CC185;
+		position: fixed;
+		z-index: 1031;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+	}
+	.peg {
+		//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 10px #2CC185, 0 0 5px #2CC185;
+	}
+}
+#sidr {
+	&::-webkit-scrollbar {
+		width: 11px;
+		height: 12px;
+		background: $color_gray_nurse_approx;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_gray_nurse_approx;
+		border: 1px solid $color_gallery_approx;
+		//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+		border-radius: 20px;
+		&:hover {
+			background-color: #2CC185;
+			border: 1px solid $color_gallery_approx;
+		}
+		&:active {
+			background-color: $color_jungle_green_approx;
+			border: 1px solid $color_gray_nurse_approx;
+		}
+	}
+}
+input.form-control.input-lg {
+	&.ng-pristine.ng-valid {
+		background: $white;
+		border: 1px solid $color_silver_approx;
+		color: $color_boulder_approx;
+		font-family: $font_2;
+	}
+	&.ng-valid.ng-dirty {
+		background: #FFF;
+		color: $color_stack_approx;
+		font-family: $font_2;
+	}
+}
+.form-control:focus {
+	border-color: #2CC185;
+	outline: 0;
+	//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 1px 1px #2CC185, -1px -1px 1px #2CC185;
+}
+#cssmenu>ul:last-child {
+	margin-bottom: 105px;
+}
+.playlist li {
+	margin-top: 1px;
+	font: 13px $font_1;
+	color: #2CC185;
+	text-transform: capitalize;
+	cursor: pointer;
+	font-weight: bold;
+	//Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: .2s;
+	&:hover {
+		color: $color_boulder_approx;
+		border-right: 4px solid $color_boulder_approx;
+	}
+}
+.iframe li {
+	@extend %extend_5;
+	&:nth-child(even) {
+		background: $color_black_haze_approx;
+	}
+	&:nth-child(odd) {
+		background: $wild_sand;
+	}
+}
+li:hover {
+	color: $color_boulder_approx;
+}

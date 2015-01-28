@@ -1,0 +1,407 @@
+@import url(pacifico.css);
+body {
+    background: #fff url(/images/backgrounds.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family:  cursive;
+    overflow-x: hidden;
+    
+}
+h3{
+    font-weight: bolder;
+    border-bottom: 1px solid #fff;
+    margin: 15px 0px 15px 0px;
+}
+h2{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    border-radius: 5px;
+    font-family:'Bree Serif';
+    text-shadow: 0.025em 0.025em 0.025em rgba(0, 0, 0, 0.8);
+    line-height: 1em;
+    padding: 1%;
+    text-align: center;
+}
+p{
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 5%;
+    
+}
+.contain{
+    opacity: 0;
+}
+.input {
+    text-align: center;
+    margin-top: 50px !important;
+}
+
+input {
+    margin-top: 5px;
+  margin-bottom:-10px;
+  margin-left: 5px;
+    width:98%;
+    font-family: 'Bree Serif';
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#070707;
+}
+input:focus{
+    background: #f8f8cf;
+    border: none;
+    
+}
+ #click{
+        width: 0%;
+         height: 0px;
+        font-size: 22px;
+        font-family: 'Bree Serif';
+        visibility: hidden;
+         
+    }
+.book {
+    margin: 20px 0px 10px 0px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 3px;
+    font-family:'Bree Serif';
+    font-weight: normal;
+    overflow: hidden;
+    clear: both;
+    box-shadow: 2PX 3PX 9PX #141203;
+}
+.book-cover {
+    float: left;
+    padding: 0;
+}
+.book-cover img{
+    width: 110%;
+    height:auto;
+}
+.book-info {
+    margin: 10px 0px 0px 45px;
+    padding: 10px;
+    color: #fff;
+    text-shadow: 0.025em 0.025em 0.025em rgba(0, 0, 0, 0.8);
+    float: left;
+}
+.footer {
+    margin: 30px 20px;
+}
+.intro a{
+    position:fixed;
+    padding: 10px;
+    bottom:1em;
+    right: 2em;
+    color:#e5e5e5;
+    text-decoration: none;
+    font:  22px 'Bree Serif'; 
+    font-weight: 600;
+    -webkit-transition:1s;
+}
+.intro a:hover{
+    color:#e72156;
+}
+.top a{
+    position:fixed;
+    padding: 10px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color:#fff;
+    bottom:1em;
+    left: 5em;
+    font:  18px arial ;
+    font-weight:bold;
+
+}
+.facebook{
+    position: fixed;
+    top:5%;
+    left:90%;
+}
+
+
+
+#books{
+    width: 90%;
+    display:block;
+    margin-left: 5%;
+    align-content: space-between;
+}
+/* Bootstrap Redesign*/
+.active{
+  color:#74777b;
+}
+.navbar-brand{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'pacifico';
+    font-weight:900;
+    letter-spacing: 1px;
+   text-shadow: 1px 2px 5px #141417;
+  margin-top: 5px;
+    
+}
+.navbar-inverse{
+    background: #00a1f1;
+    border: none;
+    color: #74777b;
+    border-bottom:4px solid #fff ;
+
+}
+.navbar-inverse .navbar-brand {
+    color:#fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+.navbar-inverse .navbar-brand:hover{
+   color:#fff;
+}
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand{
+    margin-left: -50px;
+}
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:focus{
+    margin-left: 40px;
+    border: none;
+    color: black;
+    background: #74777b;
+}
+.navbar-inverse .navbar-toggle:hover,
+{
+    background: transparent;
+    color: black;
+    background: #74777b;
+}
+
+.navbar-inverse .navbar-nav>.active>a
+{
+  background: #0094dd;
+  color: #fff;
+  
+}
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover{
+  background: #007cb5;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color:#fff;
+  padding: 21px;
+  font-family: 'Bree Serif';
+  font-size: 20px;
+  font-weight:bolder;
+  text-shadow: 0.025em 0.025em 0.025em rgba(0, 0, 0, 0.8);
+}
+
+.btn-success,.btn-success:active, 
+.btn-success:hover, .btn-success:focus,
+.btn-success:active, .btn-success.active{
+    background: #2CC185;
+    color: #fff;
+    border-color: #2CC185; 
+    border-radius: 2px;
+}
+.btn-success > a >span{
+    color: #fff;
+} 
+.btn-success:hover{
+    background: #2faa78;
+    color: #fff;
+    
+}
+.tooltip.bottom{
+    margin-top: 10px;
+}
+.tooltip.right{
+    margin-left: 15px;
+}
+.tooltip.left{
+    margin-left: -15px;
+}
+.breadcrumb{
+    margin-left: 3%;
+    width: 92%;
+    margin-top: 35px;
+    padding: 14px 7px; 
+   color:#2CC185;
+}
+.bradcrumb>li>a{
+    color:#2CC185
+}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+/* top progress bar*/
+
+#nprogress .bar {
+  background: #fff;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:2px;
+}
+
+footer{
+    margin-top: 150px;
+  margin-bottom: 50px;
+   padding: 30px;
+}
+#disqus{
+  margin-top: 4%;
+  
+}
+.disqus{
+  padding: 20px;
+}
+
+.fullpage{
+   position: relative;
+}@media screen and (max-width: 1080px),@media screen and (max-width: 480px){
+    #click{
+        width: 80%;
+        font-size: 22px;
+        font-family: 'Bree Serif';
+    }
+
+    .next{
+    margin-left: 15%;
+    }
+    .prew{
+        margin-left: -10%;
+        margin-right: 10%;
+    }
+    .img{
+        width: 50%;
+        height: 20%;
+    }
+    
+    .book{
+        margin-top: 20px;
+    }
+    
+}
+@media screen and (max-width: 1080px) {
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+  margin-left: -30px;                          
+  }  
+  .navbar-nav.navbar-right:last-child {
+margin-right: -55px;
+}
+  .tring{
+        left:30%;
+    }
+    
+.book-cover img{
+    width: 110%;
+/*    height: 50%;*/                                                                    
+    margin-right: 3px;
+}
+.book-info {
+    margin: -330px 0px 0px 230px;
+}
+ .footer{
+    padding-left: 40%;
+    padding-bottom: 5%;
+    }
+  .facebook{
+    left: 80%;
+    }                                                                                                                                                  
+   h3{
+     margin-top: 70px;
+   } 
+  input{
+    width: 85%;
+  }
+}
+
+}
+@media screen and (max-width: 720px) {
+   
+}
+@media screen and (max-width: 480px) {
+    .tring{
+        left:15%;
+    }
+     #search{
+       padding: 10px;
+        width: 85%;
+        margin-bottom: 2%;
+       overflow: hidden;
+    }
+    .book-cover img{
+    width: 130%;
+/*    height: 30%;*/
+    margin-right: 3px;
+}
+.book-info {
+    margin: 30px 0px 10px 10px;
+}
+    .btn-success{
+        width: 100%;
+        align-content: center;
+    }
+    .facebook{
+        left: 75%;
+    }
+}
+@media screen and (max-width: 321px){
+    h2{
+        font-size: 21px;
+        padding: 3px;
+    }
+    #search{
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    #click{
+        width: 70%;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 2%;
+      }
+  input{
+    width: 95%;
+  }
+    .book{
+        margin-top: 20px;
+    }
+    .book-cover img{
+    width: 120%;
+    }
+    p.ng-binding{
+        display: none;
+    }
+    .btn-success{
+        margin-left: 1px;
+        width: 100%;
+    }
+    .footer{
+        padding-bottom: 10%;
+    }
+    .next{
+    margin-left: 1%;
+    }
+    .prew{
+        margin-left: -45%;
+        margin-right: 40%;
+    }
+    .intro a,
+    .top a{
+        display: none !important;
+    }
+    .facebook{
+        left: 72%;
+    }
+    .comment {
+    background: #fff;
+    box-shadow: 1px 1px 5px black;
+    z-index: 9999;
+   }
+  

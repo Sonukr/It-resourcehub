@@ -1,0 +1,316 @@
+@import url(pacifico.css);
+body{
+    background: #e7ecea;
+    box-sizing: border-box;
+   font-family: 'Bree Serif';
+  font-size: 20px;
+  font-weight:bolder;
+}
+a{
+    text-decoration: none;
+    color:#00a478;
+    font: 19px arial;
+}
+a:hover{
+    text-decoration: none;
+    color:#74777b;
+}
+/* Bootstrap Redesign*/
+.active{
+  color:#74777b;
+}
+.navbar-brand{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'pacifico';
+    font-weight:900;
+    letter-spacing: 1px;
+   text-shadow: 1px 2px 5px #141417;
+    
+}
+.navbar-inverse{
+    background: #00a478;
+    border: none;
+    color: #74777b;
+    border-bottom:4px solid #fff ;
+
+}
+.navbar-inverse .navbar-brand {
+    color:#fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+.navbar-inverse .navbar-brand:hover{
+   color:#fff;
+}
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand{
+    margin-left: -50px;
+}
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:focus{
+    margin-left: 40px;
+    border: none;
+    color: black;
+    background: #74777b;
+}
+.navbar-inverse .navbar-toggle:hover,
+{
+    background: transparent;
+    color: black;
+    background: #74777b;
+}
+input.form-control.input-lg.ng-pristine.ng-valid{
+    background: #fff;
+    border: 1px solid #2CC185;
+    color: #74777b;                                                                                                     font-family: 'Bree Serif';
+}
+input.form-control.input-lg.ng-valid.ng-dirty {
+background: #FFF;
+    color: #8b8a8a;
+    font-family: 'Bree Serif';
+}
+.form-control:focus {
+ border-color: #2CC185; 
+  outline: 0;
+ -webkit-box-shadow:  1px 1px 1px #2CC185, -1px -1px 1px #2CC185;
+ box-shadow:  1px 1px 1px #2CC185, -1px -1px 1px #2CC185; 
+}
+.input-group-addon{
+    cursor: pointer;
+}
+.input-box{
+    margin-top: 10%;
+    width: 105%;
+  margin-bottom: 10px;
+}
+.input-group-addon{
+    height: 40px;
+}
+.btn-success,.btn-success:active, 
+.btn-success:hover, .btn-success:focus,
+.btn-success:active, .btn-success.active{
+    background: #2CC185;
+    color: #fff;
+    border-color: #2CC185; 
+    border-radius: 2px;
+}
+.btn-success > a >span{
+    color: #fff;
+} 
+.btn-success:hover{
+    background: #2faa78;
+    color: #fff;
+    
+}
+.tooltip.bottom{
+    margin-top: 10px;
+}
+.tooltip.right{
+    margin-left: 15px;
+}
+.tooltip.left{
+    margin-left: -15px;
+}
+.breadcrumb{
+    margin-left: 3%;
+    width: 92%;
+    margin-top: 5px;
+    padding: 14px 7px; 
+   color:#2CC185;
+}
+.bradcrumb>li>a{
+    color:#2CC185
+}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+/* sidr redesign*/
+
+#side-menu{
+    color:#74777b;
+}
+#side-menu:hover{
+    color:#fff;
+}
+.sidr{
+    background: #fff;
+    border: none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+            box-shadow:none;
+    margin-top: 55px;
+}
+.sidr ul{
+    width: 107%;
+    border-bottom: none;
+    border-top: none;
+}
+.sidr ul li{
+    border-top: none;
+    border-bottom: 1px solid #e7ecea;
+    border-top: 1px solid #e7ecea;
+    border-right: 4px solid #2CC185;
+}
+.sidr ul li a, .sidr ul li span,
+.sidr ul li ul li a, .sidr ul li ul li span{
+    color: #2CC185;
+    font: 13px arial;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .2s; 
+    margin-left: -10px;
+}
+
+.sidr ul li ul li span:hover{
+    color: #74777b;
+}
+.sidr ul li:hover > a, .sidr ul li:hover > span,
+.sidr ul li.active > a, .sidr ul li.active > span,
+.sidr ul li.sidr-class-active >a,
+.sidr ul li.sidr-class-active > span,
+.sidr ul li ul li:hover > a, .sidr ul li ul li:hover > span,
+.sidr ul li ul li.active > a, .sidr ul li ul li.active > span,
+.sidr ul li ul li.sidr-class-active >a,
+.sidr ul li ul li.sidr-class-active > span
+{
+ -webkit-box-shadow: none;
+ -moz-box-shadow: none;
+   box-shadow: none;
+}
+
+/* Accordian css*/
+#cssmenu{
+    margin-top: -5px;
+}
+#cssmenu>ul:last-child{
+    margin-bottom: 105px;
+}
+#cssmenu > ul > li > a :hover{
+    color: #74777b;
+}
+#cssmenu > ul :hover{
+    border-right:2px solid #74777b;
+}
+#cssmenu > ul > li > a > span{
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+#cssmenu > ul > li > a > span:hover,
+#cssmenu ul ul:hover{
+    border-right:none;
+}
+#cssmenu ul ul a{
+    font-size: 13px arial;
+    font-weight: bold;
+    border-left: 3px solid #2CC185;
+}
+#cssmenu ul ul a:hover{
+    border-left: 3px solid #74777b;
+}
+.playlist li{
+    margin-top: 1px;
+    font: 13px arial;
+    color:#2CC185;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+.sidr ul li a, .sidr ul li span, .sidr ul li ul li a, .sidr ul li ul li span{
+   font-family: 'Bree Serif';
+}
+.breadcrumb > li > a{
+  font-family:'Bree Serif';
+  margin-left: 5px;
+}
+/* video player and fitvid*/
+.video{
+    margin-top: 25px;
+    position: relative;
+}
+.iframe iframe{
+    box-shadow: 1px 2px 6px #000;
+}
+#iframe{
+    width: 90%;
+    display:block;
+    margin-left: 5%;
+    align-content: space-between;
+}
+
+.iframe li,h3,h1{
+    font:17px 'Bree Serif';
+    list-style:decimal-leading-zero;
+    color:#2CC185;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    padding: 10px;
+}
+.iframe li:nth-child(even){
+    background: #f7f7f7;
+    
+}
+.iframe li:nth-child(odd){
+    background: #f4f4f4;
+
+}
+.playlist li:hover{
+    color:#74777b;
+    border-right: 4px solid #74777b;
+}
+li:hover{
+    color:#74777b;
+}
+
+
+/* top progress bar*/
+
+#nprogress .bar {
+  background: #fff;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:2px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #00c38b, 0 0 5px #00a478;
+}
+
+
+/* design the scrollbar for sidr*/
+#sidr::-webkit-scrollbar{          /* set the color and width*/
+    width: 11px;
+    height: 12px;
+    background: #e7ecea;
+}
+#sidr::-webkit-scrollbar-thumb{    /*set the onload color for thumb of scroll*/
+background-color:#e7ecea;
+border:1px solid #ededed;
+border-radius:20px;
+}
+#sidr::-webkit-scrollbar-thumb:hover{  /*set the onhover color for thumb of scroll*/
+background-color:#2CC185;
+border:1px solid #ededed;
+}
+#sidr::-webkit-scrollbar-thumb:active{  /*set the onactive color for thumb of scroll*/
+background-color:#2faa78;
+border:1px solid #e7ecea;
+} 
+
+footer{
+    margin-top: 150px;
+  margin-bottom: 50px;
+   padding: 30px;
+}
+#disqus{
+  margin-top: 4%;
+}
